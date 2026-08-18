@@ -5,15 +5,82 @@
 }
 
 body {
+  height: 80vh;
   background-color: rgb(24, 40, 43);
   color: white;
+  font-family: "Geostar", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  .disp {
+    color: #000;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 14rem;
+    height: 4rem;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow:
+      rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
 }
 
 .btnGroup {
-  width: 30rem;
-  height: 30rem;
+  width: 14rem;
+  height: 18rem;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
   .btn {
     width: 4rem;
+    height: 4rem;
+    font-family: "Geostar", sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    box-shadow:
+      rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px,
+      rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px,
+      rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+
+  .btn.active {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+  .clear {
+    font-size: 1.5rem;
   }
 }

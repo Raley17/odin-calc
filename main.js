@@ -1,3 +1,8 @@
+const display = document.querySelector(".disp");
+const buttns = document.querySelectorAll(".btn");
+const equal = document.querySelector(".equal");
+const clear = document.querySelector(".clear");
+
 let firstNum = 12;
 let mainOperator = "-";
 let secondNum = 8;
@@ -30,4 +35,10 @@ function operator(num1, oper, num2) {
   }
 }
 
-console.log(operator(firstNum, mainOperator, secondNum));
+buttns.forEach((btn) => {
+  if (btn.textContent !== "=" && btn.textContent !== "CC") {
+    btn.addEventListener("click", () => {
+      display.textContent += btn.textContent;
+    });
+  }
+});
